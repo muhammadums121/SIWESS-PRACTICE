@@ -1,2 +1,3 @@
-# SIWES Practice - Version B
-Git practice 
+# SIWES Practice - Version A
+Git practice
+
