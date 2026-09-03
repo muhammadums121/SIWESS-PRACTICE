@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <header>
+   <nav class="navbar">
+          <div class="logo">MS</div>
+       <ul class="nav-links" id="navLinks">
+           <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+         <li><a href="#contact">Contact</a></li>
+        </ul>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+         <h2>About Me</h2>
+             <div class="about-grid">
+             <div class="about-photo">
+              <!-- placeholder for now -->
+              <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Photo of Your Name" class="photo-box">
+             </div>
+             <div class="about-text">
+                 <p>I'm a developer currently doing my SIWES industrial attachment, teaching myself
+                     web development from the ground up — HTML, CSS, and JavaScript. 
+                     Outside of that, I write Python scripts and 
+                     explore trading strategies based on Smart Money Concepts.</p>
+                     <p>I like building things that solve real problems, 
+                            whether that's a clean web page or
+                  a script that helps me analyze market data. 
+                Currently expanding my skills one project at a time.</p>
+            </div>
+        </div>
+    </section>
+ 
+  
+    <section id="projects">
+      <div class="project-card-wrapper">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>A Python script that logs trade setups based on Smart Money Concepts
+             (e.g. order blocks, liquidity sweeps, market structure shifts)
+             into a spreadsheet or database for backtesting and journaling.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>A Python tool that pulls historical price data 
+            (via an API like Yahoo Finance or a broker's API)
+             and outputs clean CSVs for chart analysis — practice 
+             for future backtesting projects..</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Three</h3>
+        <p>The very site you're building right now — HTML/CSS
+             built from scratch during your SIWES self-study,
+              no frameworks, fully responsive.
+             It's a legitimate project to list because it 
+             shows you can build real interfaces.</p>
+      </div>
+
+      </div>  
+           <section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <input type="text" id="nameInput" placeholder="Your name" required>
+    <input type="email" id="emailInput" placeholder="Your email" required>
+    <textarea id="messageInput" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <p id="formStatus"></p>
+</section>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MS. All rights reserved.</p>
+  </footer>
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Hello from Flask + Jinja2!</h1>
+    <p>Welcome, {{ name }}!</p>
+
+    <h2>My Skills:</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
